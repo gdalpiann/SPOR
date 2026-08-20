@@ -30,13 +30,9 @@ The overall complexity is `O(N (log N)²)`, or `O(N log N)` with axis pre-sortin
 
 ## Installation
 
-Clone the repository and install the dependencies:
+Clone the repository and install the dependencies
 
-```bash
-git clone <this-repository-url>
-cd SPOR
-pip install -r requirements.txt
-```
+
 
 ### ⚠️ Library-version notes
 

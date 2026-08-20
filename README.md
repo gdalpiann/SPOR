@@ -5,7 +5,7 @@
 SPOR takes a 2D projection produced by any dimensionality reduction (DR) technique (t-SNE, UMAP, PCA, LLE, …) and rearranges its points onto a uniform grid so that **no two glyphs overlap** — while treating the glyph size as a *hard constraint*. Instead of shrinking points or thumbnails when the projection is crowded (as prior grid methods do), SPOR keeps glyphs at the user-specified size and, when the visual space cannot accommodate all points, performs a **grid-aware adaptive sampling** that selects spatially representative instances. A **white-space ratio** parameter explicitly controls how much of the projection's original empty space (gaps and cluster separations) is preserved in the final layout.
 
 > 📄 This repository contains the reference implementation and experimental scripts for the paper
-> *"SPOR: Shape-preserving overlap removal for dimensionality reduction scatterplots by leveraging sampling and white-space control"*, submitted to **Computers & Graphics (2026)** — currently under review.
+> *"SPOR: Shape-preserving overlap removal for dimensionality reduction scatterplots by leveraging sampling and white-space control"* — currently under review.
 
 ---
 
@@ -53,7 +53,7 @@ The pinned set in [`requirements.txt`](requirements.txt) is the environment used
 | pandas *(figures script only)* | 2.2.3 |
 | Pillow *(figures script only)* | 11.2.1 |
 
-An older stack (numpy 1.26 / matplotlib 3.8 / numba 0.60 / scikit-learn 1.4) was also verified to work, in case you need to match legacy environments. Whatever you choose, respect the `matplotlib < 3.11` bound and the numba↔numpy pairing.
+
 
 ## Quick start
 
@@ -141,36 +141,7 @@ On 1,000 synthetic scatterplots (following the Sca²Gri evaluation protocol) and
 └── README.md
 ```
 
-## Citation
 
-If you use SPOR, please cite the paper (reference will be updated upon publication):
-
-```bibtex
-@article{spor2026,
-  title   = {SPOR: Shape-preserving overlap removal for dimensionality reduction
-             scatterplots by leveraging sampling and white-space control},
-  journal = {Computers \& Graphics},
-  year    = {2026},
-  note    = {Under review}
-}
-```
-
-SPOR builds on DGrid for the grid-assignment step. If you use the rendering utilities or the DGrid baseline, please also cite:
-
-```bibtex
-@article{hilasaca2024dgrid,
-  author  = {Hilasaca, Gladys M. and Marc{\'i}lio-Jr, Wilson E. and Eler, Danilo M.
-             and Martins, Rafael M. and Paulovich, Fernando V.},
-  title   = {A Grid-Based Method for Removing Overlaps of Dimensionality Reduction
-             Scatterplot Layouts},
-  journal = {IEEE Transactions on Visualization and Computer Graphics},
-  volume  = {30},
-  number  = {8},
-  pages   = {5733--5749},
-  year    = {2024},
-  doi     = {10.1109/TVCG.2023.3309941}
-}
-```
 
 ## License
 

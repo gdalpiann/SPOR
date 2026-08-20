@@ -5,7 +5,7 @@
 SPOR takes a 2D projection produced by any dimensionality reduction (DR) technique (t-SNE, UMAP, PCA, LLE, …) and rearranges its points onto a uniform grid so that **no two glyphs overlap** — while treating the glyph size as a *hard constraint*. Instead of shrinking points or thumbnails when the projection is crowded (as prior grid methods do), SPOR keeps glyphs at the user-specified size and, when the visual space cannot accommodate all points, performs a **grid-aware adaptive sampling** that selects spatially representative instances. A **white-space ratio** parameter explicitly controls how much of the projection's original empty space (gaps and cluster separations) is preserved in the final layout.
 
 > 📄 This repository contains the reference implementation and experimental scripts for the paper
-> *"SPOR: Shape-preserving overlap removal for dimensionality reduction scatterplots by leveraging sampling and white-space control"*, submitted to **Computers & Graphics (2026)** — currently under review.
+> *"SPOR: Shape-preserving overlap removal for dimensionality reduction scatterplots by leveraging sampling and white-space control"*,  — currently under review.
 
 ---
 

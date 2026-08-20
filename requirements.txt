@@ -1,8 +1,8 @@
-# SPOR — verified environment (Python 3.11)
-
-numpy==1.26.4
-matplotlib==3.8.4
-numba==0.60.0
-scikit-learn==1.4.2
-
-
+# SPOR — author's verified environment (Python 3.11)
+# This exact set was tested end-to-end (layout computation + rendering).
+# Keep matplotlib < 3.11: scatterplot.py uses matplotlib.cm.get_cmap,
+# which is deprecated and scheduled for removal in Matplotlib 3.11.
+numpy==2.2.5
+matplotlib==3.10.1
+numba==0.61.2
+scikit-learn==1.6.1
